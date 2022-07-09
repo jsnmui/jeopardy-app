@@ -1,6 +1,12 @@
+.Trivia {
+   display:flex;
+   flex-direction: column;
+   gap:20px;
+}
+
 .App {
   text-align: center;
-}
+ }
 
 .App-logo {
   height: 40vmin;

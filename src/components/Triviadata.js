@@ -4,7 +4,7 @@ const TriviaData = (props) => {
   const [selected, setSelected] = useState(0)
 
     return (
-      <div>
+      <div className="Trivia">
         <div>Category: {props.trivia[0].category.title}</div>
         <div>Points: {props.trivia[0].value}</div>
         <div>Answer: {props.trivia[0].answer}</div>
