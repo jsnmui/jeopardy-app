@@ -9,6 +9,7 @@ class App extends Component {
   state = {
     searchURL: "http://jservice.io/api/random",
     trivia: null,
+    totalScore:0
     };
 
   handleChange = (event) => {
@@ -28,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Welcome to Jeopardy!</h1>
-        <Score />
+        <Score totalScore={this.state.totalScore} />
         <h3> Let's Play!</h3>
         <Buttons handleSubmit={this.handleSubmit}/>
         {this.state.trivia && <TriviaData trivia={this.state.trivia}/>}
