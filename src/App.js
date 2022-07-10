@@ -2,39 +2,38 @@
 import "./App.css";
 import {Component} from "react";
 import TriviaData from "./components/Triviadata"
-import Buttons from "./components/Buttons";
 import Score from "./components/Score";
+import Buttons from "./components/Buttons"
 
 class App extends Component {
   state = {
     searchURL: "http://jservice.io/api/random",
     trivia: null,
+    Value:0, 
     totalScore:0
     };
 
-  handleChange = (event) => {
-    this.setState({ [event.target.id]: event.target.value })
-  };
-
-  handleSubmit = (e) => {
+  
+ handleSubmit = (e) => {
     e.preventDefault();
     this.setState(  () => {
       fetch(this.state.searchURL)
       .then(res => res.json())
       .then(json => this.setState({trivia:json}))
-    });
+     });
   };
 
   render() {
     return (
       <div className="App">
         <h1>Welcome to Jeopardy!</h1>
-        <Score totalScore={this.state.totalScore} />
+        {this.state.trivia && <Score totalScore={this.state.totalScore} trivia={this.state.trivia} />}
         <h3> Let's Play!</h3>
         <Buttons handleSubmit={this.handleSubmit}/>
-        {this.state.trivia && <TriviaData trivia={this.state.trivia}/>}
+        {this.state.trivia && <TriviaData trivia={this.state.trivia} getValue={this.getValue} />}
+     
        
-       </div>
+     </div>
     );
   }
 }

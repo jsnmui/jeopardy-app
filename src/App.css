@@ -1,8 +1,15 @@
+.reveal {
+  color:white;
+  background-color: blue;
+ 
+}
+
 .Trivia {
    margin-top: 20px;
    display:flex;
    flex-direction: column;
    gap:20px;
+   font-size: 30px;
 }
 
 .App {
