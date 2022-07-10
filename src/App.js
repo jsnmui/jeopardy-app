@@ -30,7 +30,7 @@ class App extends Component {
         {this.state.trivia && <Score totalScore={this.state.totalScore} trivia={this.state.trivia} />}
         <h3> Let's Play!</h3>
         <Buttons handleSubmit={this.handleSubmit}/>
-        {this.state.trivia && <TriviaData trivia={this.state.trivia} getValue={this.getValue} />}
+        {this.state.trivia && <TriviaData trivia={this.state.trivia} />}
      
        
      </div>
