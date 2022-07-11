@@ -1,3 +1,17 @@
+#lets{
+  color:orange;
+  font-size: 30px;
+}
+
+#score{
+  color:orange;
+  font-size: 30px;
+}
+
+h1{
+  color:white;
+  font-size: 50px;
+}
 .reveal {
   color:white;
   background-color: blue;
@@ -10,6 +24,30 @@
    flex-direction: column;
    gap:20px;
    font-size: 30px;
+   color: yellow;
+}
+
+#inc{
+  background-color: pink;
+  font-size: 30px;
+  margin:10px;
+}
+
+#dec{
+  background-color: lavender;
+  font-size: 30px;
+  margin:10px;
+}
+
+#get{
+  background-color: yellow;
+  font-size: 30px;
+  margin:10px;
+}
+
+#reset{
+  background-color: red;
+  font-size: 30px;
 }
 
 .App {

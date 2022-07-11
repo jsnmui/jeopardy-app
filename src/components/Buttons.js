@@ -1,7 +1,7 @@
 const Buttons= (props) => {
    
       return(
-        <button onClick={props.handleSubmit}>Get Question</button>
+        <button id="get" onClick={props.handleSubmit}>Get Question</button>
       )
   }
   
