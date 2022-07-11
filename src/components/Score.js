@@ -10,19 +10,20 @@ class Score extends React.Component {
   } 
   
   onIncrease(e) {
-    this.props.onIncrease(e)    // increase totalsore by points of the questipn
     this.props.getValue(this.props.trivia[0].value)  
-  }
+    this.props.onIncrease(e)    // increase totalsore by points of the questipn
+   }
 
   onDecrease(e) {
+    this.props.getValue(this.props.trivia[0].value)  
     this.props.onDecrease(e); //decrease  totalsore by points of the questipn
-    this.props.getValue(this.props.trivia[0].value)
+   
   }
 
   reset(e) {
+    this.props.getValue(this.props.trivia[0].value)  
     this.props.reset(e); //decrease  totalsore by points of the questipn
-    this.props.getValue(this.props.trivia[0].value)
-  }
+   }
 
    render() {
     return(
